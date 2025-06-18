@@ -20,7 +20,6 @@ const Header = () => {
   const navItems = [
     { path: "/", label: "Главная", icon: "Home" },
     { path: "/my-notes", label: "Мои заметки", icon: "FileText" },
-    { path: "/shared-notes", label: "Общие заметки", icon: "Users" },
     { path: "/about", label: "О колледже", icon: "School" },
     { path: "/contacts", label: "Контакты", icon: "Phone" },
   ];

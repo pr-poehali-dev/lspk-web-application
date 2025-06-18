@@ -4,6 +4,17 @@ import DynamicBanner from "@/components/DynamicBanner";
 import NotificationSystem from "@/components/NotificationSystem";
 
 const Index = () => {
+  // Mock authentication state - in real app this would come from auth context
+  const isAuthenticated = false;
+
+  const handleCreateNote = () => {
+    if (!isAuthenticated) {
+      alert("Пожалуйста, войдите в систему для создания заметок");
+      return;
+    }
+    // Handle note creation logic here
+  };
+
   const stats = [
     {
       title: "Мои заметки",
@@ -12,14 +23,6 @@ const Index = () => {
       description: "активных заметок",
       trend: "up" as const,
       trendValue: "+3",
-    },
-    {
-      title: "Общие заметки",
-      value: "156",
-      icon: "Users",
-      description: "доступных материалов",
-      trend: "up" as const,
-      trendValue: "+12",
     },
     {
       title: "Уведомления",
@@ -63,7 +66,7 @@ const Index = () => {
           </div>
 
           {/* Статистика */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
             {stats.map((stat, index) => (
               <StatsCard key={index} {...stat} />
             ))}
@@ -75,7 +78,10 @@ const Index = () => {
               Быстрые действия
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-              <button className="flex items-center space-x-3 p-4 bg-blue-50 rounded-lg hover:bg-blue-100 transition-colors text-left">
+              <button
+                onClick={handleCreateNote}
+                className="flex items-center space-x-3 p-4 bg-blue-50 rounded-lg hover:bg-blue-100 transition-colors text-left"
+              >
                 <div className="p-2 bg-blue-600 rounded-lg">
                   <svg
                     className="w-5 h-5 text-white"
