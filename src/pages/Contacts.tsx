@@ -23,39 +23,46 @@ const Contacts = () => {
   const contactInfo = [
     {
       icon: "MapPin",
-      title: "Адрес",
-      content: "353740, Краснодарский край, г. Ленинградская, ул. Красная, 145",
+      title: "Адрес колледжа",
+      content:
+        "353740, Краснодарский край, Ленинградский район, ст.Ленинградская ул.Красная 152",
     },
     {
       icon: "Phone",
-      title: "Телефон",
-      content: "+7 (86145) 3-12-34",
+      title: "Директор",
+      content: "+7 (861) 457-01-40 - Бауэр Герман Владимирович",
+    },
+    {
+      icon: "Phone",
+      title: "Приемная директора",
+      content: "+7 (861) 457-35-10 - Ткаченко Алена Александровна",
     },
     {
       icon: "Mail",
       title: "Email",
-      content: "info@lspk.ru",
-    },
-    {
-      icon: "Clock",
-      title: "Время работы",
-      content: "Пн-Пт: 8:00-17:00, Сб: 9:00-14:00",
+      content: "lpk31@mail.ru",
     },
   ];
 
   return (
-    <div className="min-h-screen bg-slate-50">
+    <div className="min-h-screen bg-background">
       <Header />
       <main className="pt-8">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Логотип и заголовок */}
           <div className="text-center mb-12">
-            <h1 className="text-4xl font-bold text-slate-900 mb-4">Контакты</h1>
-            <p className="text-xl text-slate-600">
-              Свяжитесь с нами любым удобным способом
+            <div className="w-24 h-24 bg-gradient-to-br from-gray-700 to-gray-900 rounded-2xl flex items-center justify-center shadow-xl mx-auto mb-6">
+              <Icon name="GraduationCap" size={48} className="text-white" />
+            </div>
+            <h1 className="text-4xl font-bold text-foreground mb-4">
+              Контакты ЛСПК
+            </h1>
+            <p className="text-xl text-muted-foreground">
+              ГАПОУ КК "Ленинградский социально-педагогический колледж"
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-3 gap-8 mb-12">
+          <div className="grid lg:grid-cols-2 xl:grid-cols-4 gap-6 mb-12">
             {contactInfo.map((item, index) => (
               <Card key={index} className="text-center">
                 <CardHeader>
@@ -67,7 +74,7 @@ const Contacts = () => {
                   <CardTitle className="text-lg">{item.title}</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-slate-700">{item.content}</p>
+                  <p className="text-muted-foreground">{item.content}</p>
                 </CardContent>
               </Card>
             ))}
@@ -124,13 +131,15 @@ const Contacts = () => {
               </CardHeader>
               <CardContent>
                 <div className="space-y-4">
-                  <div className="bg-slate-100 rounded-lg p-4 text-center">
+                  <div className="bg-muted rounded-lg p-4 text-center">
                     <Icon
                       name="Map"
                       size={48}
-                      className="mx-auto text-slate-400 mb-2"
+                      className="mx-auto text-muted-foreground mb-2"
                     />
-                    <p className="text-slate-600">Карта будет загружена</p>
+                    <p className="text-muted-foreground">
+                      Карта будет загружена
+                    </p>
                   </div>
 
                   <div className="space-y-3">
@@ -141,10 +150,10 @@ const Contacts = () => {
                         className="text-blue-600 mr-2 mt-1"
                       />
                       <div>
-                        <p className="font-medium text-slate-900">
+                        <p className="font-medium text-foreground">
                           На автомобиле
                         </p>
-                        <p className="text-sm text-slate-600">
+                        <p className="text-sm text-muted-foreground">
                           Парковка доступна на территории колледжа
                         </p>
                       </div>
@@ -157,10 +166,10 @@ const Contacts = () => {
                         className="text-green-600 mr-2 mt-1"
                       />
                       <div>
-                        <p className="font-medium text-slate-900">
+                        <p className="font-medium text-foreground">
                           Общественный транспорт
                         </p>
-                        <p className="text-sm text-slate-600">
+                        <p className="text-sm text-muted-foreground">
                           Автобусы №5, 12 до остановки "Колледж"
                         </p>
                       </div>

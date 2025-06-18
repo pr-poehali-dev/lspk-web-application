@@ -34,25 +34,25 @@ const Header = () => {
         <div className="flex justify-between items-center h-16">
           {/* Логотип */}
           <div className="flex items-center space-x-3">
-            <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center">
-              <Icon name="GraduationCap" className="text-white" size={24} />
+            <div className="w-12 h-12 bg-gradient-to-br from-gray-700 to-gray-900 rounded-xl flex items-center justify-center shadow-lg">
+              <Icon name="GraduationCap" className="text-white" size={28} />
             </div>
             <div>
-              <h1 className="text-xl font-bold text-slate-900">ЛСПК</h1>
-              <p className="text-xs text-slate-500">Заметки</p>
+              <h1 className="text-xl font-bold text-gray-900">ГАПОУ КК ЛСПК</h1>
+              <p className="text-xs text-gray-500">Система заметок</p>
             </div>
           </div>
 
           {/* Навигация */}
-          <nav className="hidden md:flex items-center space-x-1">
-            {navItems.map((item) => (
+          <nav className="hidden lg:flex items-center space-x-1">
+            {navItems.slice(0, 3).map((item) => (
               <Link
                 key={item.path}
                 to={item.path}
-                className={`flex items-center space-x-2 px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
+                className={`flex items-center space-x-2 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
                   location.pathname === item.path
-                    ? "bg-blue-100 text-blue-700"
-                    : "text-slate-600 hover:text-slate-900 hover:bg-slate-100"
+                    ? "bg-accent text-accent-foreground shadow-sm"
+                    : "text-gray-600 hover:text-gray-900 hover:bg-gray-100"
                 }`}
               >
                 <Icon name={item.icon as any} size={16} />

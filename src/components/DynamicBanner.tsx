@@ -16,30 +16,23 @@ const DynamicBanner = () => {
   const bannerImages: BannerImage[] = [
     {
       id: "1",
-      url: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=800&h=400&fit=crop",
+      url: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=1200&h=600&fit=crop",
       title: "Мои заметки",
       description: "Создавайте и управляйте личными заметками",
       link: "/my-notes",
     },
     {
       id: "2",
-      url: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&h=400&fit=crop",
-      title: "Общие заметки",
-      description: "Совместная работа над учебными материалами",
-      link: "/shared-notes",
+      url: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1200&h=600&fit=crop",
+      title: "Образовательная среда",
+      description: "Современные методы обучения в ЛСПК",
+      link: "/contacts",
     },
     {
       id: "3",
-      url: "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=800&h=400&fit=crop",
-      title: "О колледже",
-      description: "История и достижения ГАПОУ КК ЛСПК",
-      link: "/about",
-    },
-    {
-      id: "4",
-      url: "https://images.unsplash.com/photo-1486312338219-ce68e2c6b7c5?w=800&h=400&fit=crop",
-      title: "Контакты",
-      description: "Свяжитесь с администрацией колледжа",
+      url: "https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?w=1200&h=600&fit=crop",
+      title: "Наши достижения",
+      description: "История успеха Ленинградского колледжа",
       link: "/contacts",
     },
   ];
